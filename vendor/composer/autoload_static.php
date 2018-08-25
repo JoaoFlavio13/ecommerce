@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit1a5155c1506c9925c9911cccdeb067df
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/hcodebr/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'c' => 
+        array (
+            'cloudtrek\\' => 10,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'cloudtrek\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cloudtrek/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInit1a5155c1506c9925c9911cccdeb067df
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit1a5155c1506c9925c9911cccdeb067df::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1a5155c1506c9925c9911cccdeb067df::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1a5155c1506c9925c9911cccdeb067df::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit1a5155c1506c9925c9911cccdeb067df::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit1a5155c1506c9925c9911cccdeb067df::$classMap;
 
